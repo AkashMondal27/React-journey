@@ -1,0 +1,48 @@
+/* Counter container */
+.counter-container {
+  width: 500px;
+  margin: 100px auto;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #111112;
+  box-shadow: 0 0 100px rgba(194, 47, 47, 0.3);
+}
+
+/* Paragraph text */
+#para {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #fff5f5;
+}
+
+/* Button */
+#btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #46bde5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+#btn:hover {
+  background-color: #4338ca;
+}
+
+#reset-btn {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#reset-btn:hover {
+  background-color: #dc2626;
+}

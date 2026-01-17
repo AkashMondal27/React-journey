@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Parent from './assets/parent'
 import './App.css'
 
 function App() {
   
 
   return (
-   <div>Use of Props</div>
+   <Parent/>
+   
   )
 }
 

@@ -1,15 +1,26 @@
 import { useState } from 'react'
 import './App.css'
+import Button from './assets/Button';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
+   function handleClick() {
+    setCount(count + 1);
+  }
+  // reset Function
+ function handleReset() {
+    setCount(0);
+  }
   return (
     <>
       <div>
-        <h1> Use of Props </h1>
+        <Button
+         handleClick={handleClick}
+         handleReset={handleReset} 
+         />
       </div>
-      
+      <p>Count: {count}</p>
     </>
   )
 }

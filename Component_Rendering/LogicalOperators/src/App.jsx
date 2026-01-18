@@ -1,15 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Login from './assets/components/Login'
+import Logout from './assets/components/Logout'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   return (
     <>
       <div>
-       <h1> Logical operators</h1>
+        <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
+        Toggle
+      </button>
+
+      {!isLoggedIn && <Login />}
+      {isLoggedIn && <Logout />}
       </div>
       
     </>

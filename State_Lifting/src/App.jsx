@@ -1,15 +1,21 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Card from './components/card'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  // 1st, ceate a state in parent component
+    const[name , setName ]=useState("");
   return (
     <>
       <div>
-       <h1> state lifting </h1>
+      {/* 2nd ,create a Card component & pass the state and setState as props to child component */}
+       <Card name={name} setName={setName} />
+      
+       {/* 4th , display the value of name state in parent component */}
+       <p>I am inside Parent Component and Value of name is {name}</p>
+      
       </div>
       
     </>

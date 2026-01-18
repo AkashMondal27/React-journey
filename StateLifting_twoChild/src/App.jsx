@@ -1,15 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Card from './assets/Components/Card.jsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+const[name1, setName1]=useState("");
+const[name2, setName2]=useState("");
 
   return (
     <>
       <div>
-       <h1>State Lifting</h1>
+       <Card name={name1} setName1={setName1} />
+        <Card name={name2} setName1={setName2} />
+
+        <p>I am inside Parent Component and Value of name1 is {name1}</p>
+        <p>I am inside Parent Component and Value of name2 is {name2}</p>
+
       </div>
       
     </>

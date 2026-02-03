@@ -11,7 +11,7 @@ const ChildC = () => {
       <p>Name: {user.name}</p>
       <p>Mobile: {user.mobile}</p>
       <p>Email: {user.email}</p>
-    </div>
+    </div> 
   )
 }
 

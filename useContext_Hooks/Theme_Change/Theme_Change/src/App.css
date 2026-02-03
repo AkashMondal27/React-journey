@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#Container{
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}

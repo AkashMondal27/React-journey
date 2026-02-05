@@ -9,6 +9,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Paramcompo from './components/Paramcompo'
 
 function App() {
   
@@ -33,6 +34,14 @@ function App() {
           element : <div>
             <Navbar />
             <Deshboard />
+          </div>
+        },
+        {
+          path:"/student/:id",
+          element :
+          <div>
+            <Navbar/>
+            <Paramcompo/>
           </div>
         }
       ]

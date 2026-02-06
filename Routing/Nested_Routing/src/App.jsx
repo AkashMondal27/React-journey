@@ -1,53 +1,91 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
-import Home from './components/Home';
-import About from './components/About';
-import Deshboard from './components/Deshboard';
-import Navbar from './components/Navbar';
+import Home from "./components/Home";
+import About from "./components/About";
+import Deshboard from "./components/Deshboard";
+import Navbar from "./components/Navbar";
+import Mock_test from "./components/Mock_test";
+import Courses from "./components/courses";
+import Reports from "./components/Reports";
+import NotFound from "./components/NotFound";
 
 function App() {
 
   const router = createBrowserRouter([
+{},
+{},
+{},
+{},
+{    
+  path :"*" ,
+  element : <NotFound/>
+},
+
+
+    // Home
     {
       path: "/",
       element: (
-        <div>
+        <>
           <Navbar />
           <Home />
-        </div>
+        </>
       ),
     },
+
+    // About
     {
       path: "/about",
       element: (
-        <div>
+        <>
           <Navbar />
           <About />
-        </div>
+        </>
       ),
     },
+
+    
+
+    // Dashboard (Parent)
     {
       path: "/deshboard",
       element: (
-        <div>
+        <>
           <Navbar />
           <Deshboard />
-        </div>
+        </>
       ),
+
+      // ✅ children must be HERE
+      children: [
+
+        {
+          path: "courses",
+          element: <Courses />,
+        },
+
+        {
+          path: "mock-test",
+          element: <Mock_test />,
+        },
+
+        {
+          path: "reports",
+          element: <Reports />,
+        },
+
+      ],
     },
+
   ]);
 
-  return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
